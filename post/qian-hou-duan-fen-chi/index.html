@@ -2,19 +2,17 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Spring Boot | Gridea</title>
+<title>前后端分离 | Gridea</title>
 <link rel="shortcut icon" href="https://github.com/fengbo2166936/Frank.github.io/favicon.ico?v=1595230366833">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://github.com/fengbo2166936/Frank.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Spring Boot | Gridea - Atom Feed" href="https://github.com/fengbo2166936/Frank.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="前后端分离 | Gridea - Atom Feed" href="https://github.com/fengbo2166936/Frank.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="#标题
-##副标题
-###正文
-" />
+    <meta name="description" content="要搞清楚前后端分离概念，必须先搞清楚什么是非前后端分离。
+在传统的做法里，比如servlet, springmvc,struts， tomcat 都会在后台运行 Java 代码，然后在后台生成全部的html 代码，接着通过 http 协议把..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -77,23 +75,33 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              Spring Boot
+              前后端分离
             </h2>
             <div class="post-info">
               <span>
                 2020-07-20
               </span>
               <span>
-                1 min read
+                2 min read
               </span>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>#标题<br>
-##副标题<br>
-###正文</p>
+                <p>要搞清楚前后端分离概念，必须先搞清楚什么是非前后端分离。<br>
+在传统的做法里，比如servlet, springmvc,struts， tomcat 都会在后台运行 Java 代码，然后在后台生成全部的html 代码，接着通过 http 协议把 html 代码传输到浏览器。<br>
+这样做的问题是：</p>
+<ol>
+<li>在后台运行的时候，如果要连接很多数据库才能把需要的数据查出来，那么这个准备 html 的过程就会比较缓慢，同时生成的 html 也相对较大， 用户就有可能感受比较慢。</li>
+<li>前后端开发的联调耦合度也很高，有时候必须互相等待，这样双方的开发效率都降低了。</li>
+</ol>
+<p>那么前后端分离什么概念呢？ html 页面的内容可以简单看成 包含数据部分和不包含数据部分。 所以先准备一个不包含数据的html， 把它传给浏览器，这个速度本身会非常快，因为没有最占时间的数据库操作部分。 然后再通过 Ajax 技术，仅仅从服务器获取“纯数据”，然后把纯数据显示在html上。<br>
+这样做的好处：</p>
+<ol>
+<li>即便是后台数据库比较花时间，但是用户体验也比前面的方式好，因为用户会先看到部分页面，过一小会儿再看到数据，比在空白页面打圈圈等待体验好。</li>
+<li>后端只提供数据，所以前后端开发耦合度降低了很多，整体开发效率可以得到较大提高。</li>
+</ol>
 
               </div>
               <div class="toc-container">
@@ -103,6 +111,15 @@
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://github.com/fengbo2166936/Frank.github.io/post/http-xiang-ying-dai-ma/">
+              <h3 class="post-title">
+                http响应代码
+              </h3>
+            </a>
+          </div>
         
 
         

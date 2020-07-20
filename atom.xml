@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://github.com/fengbo2166936/Frank.github.io</id>
     <title>Gridea</title>
-    <updated>2020-07-20T03:16:09.765Z</updated>
+    <updated>2020-07-20T07:32:53.231Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://github.com/fengbo2166936/Frank.github.io"/>
     <link rel="self" href="https://github.com/fengbo2166936/Frank.github.io/atom.xml"/>
@@ -10,6 +10,43 @@
     <logo>https://github.com/fengbo2166936/Frank.github.io/images/avatar.png</logo>
     <icon>https://github.com/fengbo2166936/Frank.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[前后端分离]]></title>
+        <id>https://github.com/fengbo2166936/Frank.github.io/post/qian-hou-duan-fen-chi/</id>
+        <link href="https://github.com/fengbo2166936/Frank.github.io/post/qian-hou-duan-fen-chi/">
+        </link>
+        <updated>2020-07-20T07:11:43.000Z</updated>
+        <content type="html"><![CDATA[<p>要搞清楚前后端分离概念，必须先搞清楚什么是非前后端分离。<br>
+在传统的做法里，比如servlet, springmvc,struts， tomcat 都会在后台运行 Java 代码，然后在后台生成全部的html 代码，接着通过 http 协议把 html 代码传输到浏览器。<br>
+这样做的问题是：</p>
+<ol>
+<li>在后台运行的时候，如果要连接很多数据库才能把需要的数据查出来，那么这个准备 html 的过程就会比较缓慢，同时生成的 html 也相对较大， 用户就有可能感受比较慢。</li>
+<li>前后端开发的联调耦合度也很高，有时候必须互相等待，这样双方的开发效率都降低了。</li>
+</ol>
+<p>那么前后端分离什么概念呢？ html 页面的内容可以简单看成 包含数据部分和不包含数据部分。 所以先准备一个不包含数据的html， 把它传给浏览器，这个速度本身会非常快，因为没有最占时间的数据库操作部分。 然后再通过 Ajax 技术，仅仅从服务器获取“纯数据”，然后把纯数据显示在html上。<br>
+这样做的好处：</p>
+<ol>
+<li>即便是后台数据库比较花时间，但是用户体验也比前面的方式好，因为用户会先看到部分页面，过一小会儿再看到数据，比在空白页面打圈圈等待体验好。</li>
+<li>后端只提供数据，所以前后端开发耦合度降低了很多，整体开发效率可以得到较大提高。</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[http响应代码]]></title>
+        <id>https://github.com/fengbo2166936/Frank.github.io/post/http-xiang-ying-dai-ma/</id>
+        <link href="https://github.com/fengbo2166936/Frank.github.io/post/http-xiang-ying-dai-ma/">
+        </link>
+        <updated>2020-07-20T06:59:24.000Z</updated>
+        <content type="html"><![CDATA[<p>200 表示相应成功<br>
+301 表示客户端跳转，永久性的跳转<br>
+302 表示客户端跳转，临时性的跳转<br>
+304 表示资源未被修改<br>
+--当不是第一次访问一个静态的页面或者图片的时候，就会得到这么一个提示，提示资源没有发生改变，直接用上一次的就可以，不需要重新下载，这样就节约了带宽，访问速度也更快。<br>
+404 表示访问的页面不存在<br>
+500表示服务端的错误<br>
+--Internal Server Error</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Spring Boot]]></title>
         <id>https://github.com/fengbo2166936/Frank.github.io/post/spring-boot/</id>
